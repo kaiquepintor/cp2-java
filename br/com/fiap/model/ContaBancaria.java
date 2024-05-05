@@ -4,25 +4,16 @@ import javax.swing.*;
 
 public class ContaBancaria {
 
-    //atributos
-    private String idConta;
+    // Atributos
     protected double saldo;
 
-    //construtores
-    public ContaBancaria(String idConta, double saldo) {
-        this.idConta = idConta;
+    // Construtores
+    public ContaBancaria(double saldo) {
         this.saldo = saldo;
     }
     public ContaBancaria() {}
 
-    //getters e setters
-    public String getIdConta() {
-        return idConta;
-    }
-    public void setIdConta(String idConta) {
-        this.idConta = idConta;
-    }
-
+    // Getters e Setters
     public double getSaldo() {
         return saldo;
     }
@@ -30,12 +21,12 @@ public class ContaBancaria {
         this.saldo = saldo;
     }
 
-    //método de deposito
+    // Método de deposito
     public void depositar(double valor) {
         saldo += valor;
     }
 
-    //método de sacar
+    // Método de saque
     public void sacar(double valor) {
         if (valor <= saldo) {
             saldo -= valor;
@@ -43,7 +34,7 @@ public class ContaBancaria {
         } else JOptionPane.showMessageDialog(null, "Saldo insuficiente!");
     }
 
-    //método de retornar saldo
+    // Método de retornar saldo
     public double retornarSaldo () {
         return saldo;
     }

@@ -2,12 +2,12 @@ package br.com.fiap.model;
 
 public class ContaCorrente extends ContaBancaria{
 
-    //atributos
+    // Atributos
     private double taxaManutencaoMensal;
 
-    //construtores
-    public ContaCorrente(String idConta, double saldo, double taxaManutencaoMensal) {
-        super(idConta, saldo);
+    // Construtores
+    public ContaCorrente(double saldo, double taxaManutencaoMensal) {
+        super(saldo);
         this.taxaManutencaoMensal = taxaManutencaoMensal;
     }
     public ContaCorrente(double taxaManutencaoMensal) {
@@ -15,7 +15,7 @@ public class ContaCorrente extends ContaBancaria{
     }
     public ContaCorrente() {}
 
-    //getters e setters
+    // Getters e Setters
     public double getTaxaManutencaoMensal() {
         return taxaManutencaoMensal;
     }
@@ -23,7 +23,7 @@ public class ContaCorrente extends ContaBancaria{
         this.taxaManutencaoMensal = taxaManutencaoMensal;
     }
 
-    //método de aplicar taxa de manutenção
+    // Método de aplicar taxa de manutenção
     public void aplicartaxaManutencao() {
         sacar(taxaManutencaoMensal);
     }
